@@ -1,4 +1,8 @@
-# World's Top Polluters App
+# World's Top Polluters
+
+The app was built with React, Redux, Redux Toolkit and lots of SVGs (for keeping the design as intended and for proper relative alignment of elements).
+
+PS. I've tried to add a specially prepared video as the continents' background, but run out of time to make the masking work properly (work in progress sits in a separate branch).
 
 ![Screenshot of the World's Top Polluters App](top_polluters_app_screenshot.png)
 
