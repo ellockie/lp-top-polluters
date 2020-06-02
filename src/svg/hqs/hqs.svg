@@ -1,0 +1,36 @@
+<svg id="HQsStatic" width="1006.8" height="770.5" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      #HQsStatic {
+        pointer-events: none;
+        fill: red;
+        stroke: red;
+        stroke-width: 12px;
+        stroke-miterlimit: 10;
+        filter: drop-shadow( 2px 2px 2px rgba(0, 0, 0, .6));
+      }
+    </style>
+  </defs>
+  <g>
+    <circle cx="626.1" cy="469.6" r="1.5" />
+    <circle cx="87.1" cy="425.6" r="1.5" />
+    <circle cx="571.6" cy="360.1" r="1.5" />
+    <circle cx="162.6" cy="445.1" r="1.5" />
+    <circle cx="625.6" cy="434.1" r="1.5" />
+    <circle cx="468.6" cy="374.1" r="1.5" />
+    <circle cx="480.6" cy="373.1" r="1.5" />
+    <circle cx="752.6" cy="483.1" r="1.5" />
+    <circle cx="138.6" cy="494.1" r="1.5" />
+    <circle cx="242.6" cy="529.1" r="1.5" />
+    <circle cx="826.6" cy="418.1" r="1.5" />
+    <circle cx="186.6" cy="419.1" r="1.5" />
+    <circle cx="160.6" cy="456.1" r="1.5" />
+    <circle cx="639.6" cy="477.1" r="1.5" />
+    <circle cx="618.6" cy="458.1" r="1.5" />
+    <circle cx="604.6" cy="441.1" r="1.5" />
+    <circle cx="473.6" cy="385.1" r="1.5" />
+    <circle cx="476.6" cy="430.1" r="1.5" />
+    <circle cx="915.6" cy="711.1" r="1.5" />
+    <circle cx="323.6" cy="655.1" r="1.5" />
+  </g>
+</svg>
