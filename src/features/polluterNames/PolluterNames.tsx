@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import { pollutantSelected, selectPollutant } from "../counter/counterSlice";
+import { pollutantSelected, selectPollutant } from "../../app/pollutersSlice";
 
 import { ReactComponent as Polluter00 } from "../../svg/pollutersList/polluter00.svg";
 import { ReactComponent as Polluter01 } from "../../svg/pollutersList/polluter01.svg";
@@ -24,14 +24,14 @@ import { ReactComponent as Polluter17 } from "../../svg/pollutersList/polluter17
 import { ReactComponent as Polluter18 } from "../../svg/pollutersList/polluter18.svg";
 import { ReactComponent as Polluter19 } from "../../svg/pollutersList/polluter19.svg";
 
-import styles from "./polluters.module.css";
+import styles from "./polluterNames.module.css";
 
 /*
  *  Vectorised polluter names
  */
-export const Polluters = () => {
+export const PolluterNames = () => {
   const dispatch = useDispatch();
-  const selectedPollutant = useSelector(selectPollutant);
+  const selectedPolluter = useSelector(selectPollutant);
 
   const polluterNames: [
     React.FunctionComponent<React.SVGProps<SVGSVGElement>>,
@@ -65,7 +65,7 @@ export const Polluters = () => {
   };
 
   return (
-    <>
+    <span>
       {polluterNames.map((position, index) =>
         React.createElement(position[0], {
           key: index,
@@ -73,10 +73,10 @@ export const Polluters = () => {
           onMouseEnter: () => onMouseAction(index),
           onMouseLeave: () => onMouseAction(-1),
           className: `${styles["list-item"]} ${
-            selectedPollutant === index ? styles.highlighted : ""
+            selectedPolluter === index ? styles.highlighted : ""
           }`,
         })
       )}
-    </>
+    </span>
   );
 };

@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import { pollutantSelected, selectPollutant } from "../counter/counterSlice";
+import { pollutantSelected, selectPollutant } from "../../app/pollutersSlice";
 
 import { ReactComponent as HQsStatic } from "../../svg/hqs/hqs.svg";
 import { ReactComponent as HQ } from "../../svg/hqs/hq.svg";
@@ -10,7 +10,7 @@ import styles from "./headQuarters.module.css";
 
 export const HeadQuarters = () => {
   const dispatch = useDispatch();
-  const selectedPollutant = useSelector(selectPollutant);
+  const selectedPolluter = useSelector(selectPollutant);
 
   const hQCoordinates: [number, number][] = [
     [617.65, 463.56],
@@ -46,7 +46,7 @@ export const HeadQuarters = () => {
         <HQ
           key={index}
           className={`${styles["hq-disc-dynamic"]} ${
-            selectedPollutant === index ? styles.highlighted : ""
+            selectedPolluter === index ? styles.highlighted : ""
           }`}
           style={{ left: hq[0], top: hq[1] }}
           onMouseEnter={() => selectItem(index)}

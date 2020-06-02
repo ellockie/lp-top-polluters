@@ -1,11 +1,4 @@
 <svg id="Header" xmlns="http://www.w3.org/2000/svg" viewBox="152.6 0 668 53.75">
-  <defs>
-    <style>
-      #Header {
-        fill: gray;
-      }
-    </style>
-  </defs>
   <title>World's Top Polluters</title>
   <g id="Header">
     <g>

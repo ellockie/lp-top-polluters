@@ -1,13 +1,13 @@
 import React from "react";
 import { useSelector } from "react-redux";
 
-import { selectPollutant } from "../counter/counterSlice";
+import { selectPollutant } from "../../app/pollutersSlice";
 
 import styles from "./hqConnectors.module.css";
 
 export const HQConnectors = () => {
 
-  const selectedPollutant = useSelector(selectPollutant);
+  const selectedPolluter = useSelector(selectPollutant);
 
   const connectorLines = [
     "13.5 123.1 0.5 123.1 0.5 195.6 626.1 469.6",
@@ -39,7 +39,7 @@ export const HQConnectors = () => {
           <polyline
             key={index}
             className={`${styles["hq-line"]} ${
-              selectedPollutant === index ? styles.highlighted : ""
+              selectedPolluter === index ? styles.highlighted : ""
             }`}
             points={connectorLine}
           />
