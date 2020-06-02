@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import { pollutantSelected, selectPollutant } from "../../app/pollutersSlice";
+import { polluterHighlighted, selectHighlightedPolluter, polluterSelected } from "../../app/pollutersSlice";
 
 import { ReactComponent as HQsStatic } from "../../svg/hqs/hqs.svg";
 import { ReactComponent as HQ } from "../../svg/hqs/hq.svg";
@@ -10,7 +10,7 @@ import styles from "./headQuarters.module.css";
 
 export const HeadQuarters = () => {
   const dispatch = useDispatch();
-  const selectedPolluter = useSelector(selectPollutant);
+  const highlightedPolluter = useSelector(selectHighlightedPolluter);
 
   const hQCoordinates: [number, number][] = [
     [617.65, 463.56],
@@ -35,8 +35,12 @@ export const HeadQuarters = () => {
     [315.15, 649.06],
   ];
 
+  const highlightItem = (index: number) => {
+    dispatch(polluterHighlighted(index));
+  };
+
   const selectItem = (index: number) => {
-    dispatch(pollutantSelected(index));
+    dispatch(polluterSelected(index));
   };
 
   return (
@@ -46,11 +50,12 @@ export const HeadQuarters = () => {
         <HQ
           key={index}
           className={`${styles["hq-disc-dynamic"]} ${
-            selectedPolluter === index ? styles.highlighted : ""
+            highlightedPolluter === index ? styles.highlighted : ""
           }`}
           style={{ left: hq[0], top: hq[1] }}
-          onMouseEnter={() => selectItem(index)}
-          onMouseLeave={() => selectItem(-1)}
+          onMouseEnter={() => highlightItem(index)}
+          onMouseLeave={() => highlightItem(-1)}
+          onClick={() => selectItem(index)}
           title={`Head Quarter ${index}`}
         />
       ))}

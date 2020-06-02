@@ -1,0 +1,40 @@
+#text-box-main {
+  background-color: #5a5a5a;
+  top: 727px;
+  position: absolute;
+  width: 464px;
+  font-size: 11px;
+  left: 346px;
+  padding: 16px 22px;
+  padding-top: 8px;
+  box-shadow: 3px 3px 3px #0005;
+  border-radius: 8px;
+  color: orange;
+  text-shadow: 1px 1px 1px #000;
+  line-height: 1.3em;
+  text-align: justify;
+}
+.h3 {
+  font-size: 21px;;
+}
+.p {
+  margin: 0;
+  margin-bottom: 4px;
+}
+.tdlabel {
+  font-weight: bold;
+  color: #fff;
+  padding-right: 9px;
+  width: 195px;
+  text-align: right;
+}
+.table td {
+  vertical-align: top;
+}
+.hr {
+  border: none;
+  border-bottom: 1px solid #888;
+  border-color: #ab853f;
+  margin-bottom: 15px;
+  margin-top: -6px;
+}

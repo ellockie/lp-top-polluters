@@ -1,13 +1,13 @@
 import React from "react";
 import { useSelector } from "react-redux";
 
-import { selectPollutant } from "../../app/pollutersSlice";
+import { selectHighlightedPolluter } from "../../app/pollutersSlice";
 
 import styles from "./hqConnectors.module.css";
 
 export const HQConnectors = () => {
 
-  const selectedPolluter = useSelector(selectPollutant);
+  const selectedPolluter = useSelector(selectHighlightedPolluter);
 
   const connectorLines = [
     "13.5 123.1 0.5 123.1 0.5 195.6 626.1 469.6",

@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import { pollutantSelected, selectPollutant } from "../../app/pollutersSlice";
+import { polluterHighlighted, polluterSelected, selectHighlightedPolluter } from "../../app/pollutersSlice";
 
 import { ReactComponent as Polluter00 } from "../../svg/pollutersList/polluter00.svg";
 import { ReactComponent as Polluter01 } from "../../svg/pollutersList/polluter01.svg";
@@ -31,7 +31,7 @@ import styles from "./polluterNames.module.css";
  */
 export const PolluterNames = () => {
   const dispatch = useDispatch();
-  const selectedPolluter = useSelector(selectPollutant);
+  const selectedPolluter = useSelector(selectHighlightedPolluter);
 
   const polluterNames: [
     React.FunctionComponent<React.SVGProps<SVGSVGElement>>,
@@ -61,7 +61,11 @@ export const PolluterNames = () => {
   ];
 
   const onMouseAction = (index: number) => {
-    dispatch(pollutantSelected(index));
+    dispatch(polluterHighlighted(index));
+  };
+
+  const selectItem = (index: number) => {
+    dispatch(polluterSelected(index));
   };
 
   return (
@@ -70,11 +74,12 @@ export const PolluterNames = () => {
         React.createElement(position[0], {
           key: index,
           style: { left: position[1], top: position[2] },
-          onMouseEnter: () => onMouseAction(index),
-          onMouseLeave: () => onMouseAction(-1),
           className: `${styles["list-item"]} ${
             selectedPolluter === index ? styles.highlighted : ""
           }`,
+          onMouseEnter: () => onMouseAction(index),
+          onMouseLeave: () => onMouseAction(-1),
+          onClick: () => selectItem(index)
         })
       )}
     </span>
