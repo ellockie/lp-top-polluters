@@ -60,6 +60,7 @@ export const HeadQuarters = () => {
           title={`${polluterInfo[6][index]}, headquarters of ${
             polluterInfo[0][index].split(". ")[1]
           }`}
+          data-testid={`HeadQuarters-${index}`}
         />
       ))}
     </span>
