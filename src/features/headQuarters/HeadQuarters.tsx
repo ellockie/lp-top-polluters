@@ -40,7 +40,7 @@ export const HeadQuarters = () => {
   };
 
   return (
-    <>
+    <span>
       <HQsStatic />
       {hQCoordinates.map((hq, index) => (
         <HQ
@@ -54,6 +54,6 @@ export const HeadQuarters = () => {
           title={`Head Quarter ${index}`}
         />
       ))}
-    </>
+    </span>
   );
 };
