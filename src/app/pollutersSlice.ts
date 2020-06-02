@@ -51,5 +51,6 @@ export const { polluterHighlighted, polluterSelected } = pollutersSlice.actions;
 // in the slice file. For example: `useSelector((state: RootState) => state.polluters.value)`
 export const selectHighlightedPolluter = (state: RootState) => state.polluters.highlightedPolluter;
 export const selectPolluterInfo = (state: RootState) => state.polluters.selectedPolluterInfo;
+export const allPolluterInfo = (state: RootState) => state.polluters.polluterInfo;
 
 export default pollutersSlice.reducer;
