@@ -1,0 +1,11 @@
+.list-item {
+  opacity: 0.5;
+  fill: #d4b57d;
+  pointer-events: visiblePainted;
+  cursor: pointer;
+}
+
+.highlighted {
+  opacity: 1;
+  fill: orange;
+}

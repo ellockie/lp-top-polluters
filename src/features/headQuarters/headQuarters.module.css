@@ -1,0 +1,11 @@
+.hq-disc-dynamic {
+  transform: translate(1px, -1px);
+  opacity: 0;
+  cursor: pointer;
+  fill: red;
+  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.4));
+}
+
+.highlighted {
+  opacity: 0.8;
+}

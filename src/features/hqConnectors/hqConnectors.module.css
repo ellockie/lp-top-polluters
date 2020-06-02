@@ -1,0 +1,17 @@
+#hqLines,
+.HQLines {
+  pointer-events: none;
+}
+
+.hq-line {
+  opacity: 0;
+  fill: none;
+  stroke: orange;
+  stroke-linecap: round;
+  width: 100%;
+  height: 100%;
+}
+
+.highlighted {
+  opacity: 1;
+}
